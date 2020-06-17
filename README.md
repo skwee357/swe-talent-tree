@@ -7,7 +7,7 @@ Software Engineering Talent Tree is the ultimate (well, one day it will be) Soft
 Talent Tree inspired by old school Role Playing Games.
 
 ## Link?
-LINK HERE
+[https://swe-talent-tree.netlify.app](https://swe-talent-tree.netlify.app)
 
 ## What's next?
 I have tons of ideas:
