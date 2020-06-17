@@ -1,6 +1,5 @@
 html, body {
   height: 100%;
-  overflow: hidden;
 }
 
 body {
@@ -37,7 +36,7 @@ $skill-tree-icon-size: 36px;
       font-size: 1.25em;
     }
 
-    .container {
+    .app-container {
       text-align: left;
 
       .profession {
@@ -49,7 +48,7 @@ $skill-tree-icon-size: 36px;
         &-talent {
           background-color: #444444;
           border-radius: 6px;
-          margin: 0 25px;
+          margin: 20px 25px;
           padding: 0 20px 10px 20px;
 
           h2 {

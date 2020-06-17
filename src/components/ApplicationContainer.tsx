@@ -186,7 +186,7 @@ function ProfessionTalentContainer({talent, myKnowledge, onLearnSkill}: { talent
     }
 
     return (
-        <div className="profession-talent">
+        <div className="profession-talent col-sm">
             <h2>{talent.name}</h2>
             <div className="profession-talent-tree">
                 {levels}
@@ -203,7 +203,7 @@ function ProfessionContainer({professionId}: { professionId: number }) {
     const onLearnSkill = (skill: Skill) => setMyKnowledge([...myKnowledge, skill]);
 
     return (
-        <div className="profession">
+        <div className="profession row">
             {profession.talents.map((talent, i) => <ProfessionTalentContainer key={i} talent={talent}
                                                                               myKnowledge={myKnowledge}
                                                                               onLearnSkill={onLearnSkill}/>)}
@@ -223,7 +223,7 @@ export default function ApplicationContainer() {
                 <div className="description">
                     I want to become a <ProfessionSelectionComponent value={professionId} onChange={setProfessionId}/>
                 </div>
-                <div className="container">
+                <div className="app-container container">
                     {(professionId !== undefined) ? <ProfessionContainer professionId={professionId}/> : null}
                 </div>
             </div>
