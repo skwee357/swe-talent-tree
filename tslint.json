@@ -1,0 +1,39 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "ordered-imports": false,
+    "one-variable-per-declaration": false,
+    "no-var-requires": false,
+    "no-console": false,
+    "trailing-comma": false,
+    "object-literal-sort-keys": false,
+    "comment-format": false,
+    "only-arrow-functions": false,
+    "space-before-function-paren": false,
+    "no-angle-bracket-type-assertion": false,
+    "whitespace": false,
+    "interface-name": false,
+    "max-classes-per-file": [
+      false
+    ],
+    "no-string-literal": false,
+    "max-line-length": [
+      false
+    ],
+    "no-empty-interface": false,
+    "no-namespace": false,
+    "no-empty": false,
+    "new-parens": false,
+    "no-unused-expression": false,
+    "variable-name": false,
+    "array-type": false,
+    "no-bitwise": false,
+    "member-ordering": false,
+    "arrow-parens": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**"
+    ]
+  }
+}

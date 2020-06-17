@@ -1,0 +1,287 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: #000000;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  color: #ffffff;
+  font-size: 14px;
+}
+
+$skill-tree-icon-size: 36px;
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    background-color: #242424;
+    border: 1px solid #404040;
+    border-radius: 2px;
+    text-align: center;
+    margin: 20px 5%;
+    padding: 10px 20px;
+    flex: 1 0 auto;
+
+    h1 {
+      &.title {
+        font-family: "Press Start 2P", sans-serif;
+        font-size: 2.25em;
+      }
+    }
+
+    .description {
+      font-size: 1.25em;
+    }
+
+    .container {
+      text-align: left;
+
+      .profession {
+        margin: 24px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        &-talent {
+          background-color: #444444;
+          border-radius: 6px;
+          margin: 0 25px;
+          padding: 0 20px 10px 20px;
+
+          h2 {
+            font-size: 16px;
+            text-align: center;
+          }
+
+          &-tree {
+            &-level {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-evenly;
+              margin-bottom: 18px;
+
+              &-skill {
+                margin: 8px;
+                position: relative;
+
+                &.skill-required {
+                  &.skill-available {
+                    &:after {
+                      position: absolute;
+                      right: -2px;
+                      bottom: -2px;
+                      min-width: 5px;
+                      min-height: 5px;
+                      line-height: 5px;
+                      background-color: #bf1f1f;
+                      font-size: 10px;
+                      border-radius: 10px;
+                      content: "";
+                      border: solid 1px #c93a3a;
+                    }
+                  }
+                }
+
+                > .skill-icon {
+                  width: $skill-tree-icon-size;
+                  height: $skill-tree-icon-size;
+                  background-size: $skill-tree-icon-size $skill-tree-icon-size;
+                  background-color: #808080;
+                  border: 2px solid #c2c2c2;
+                  border-radius: 4px;
+                  cursor: pointer;
+                }
+
+                &.skill-available {
+                  > .skill-icon {
+                  }
+                }
+
+                &.skill-unavailable {
+                  > .skill-icon {
+                    filter: grayscale(100%);
+                    opacity: 0.3;
+                  }
+                }
+
+                &.skill-know {
+                  > .skill-icon {
+                    border-color: #40c040;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    flex-shrink: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 10px;
+    color: #666;
+
+    a {
+      color: #a0a0a0;
+    }
+
+    > div {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.skill-overlay {
+  min-width: 300px;
+  max-width: 300px;
+
+  .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+
+    .skill-name {
+      font-size: 1.25em;
+      font-weight: bold;
+    }
+
+    .skill-level {
+
+    }
+  }
+
+  .tree-level {
+    font-weight: bold;
+  }
+
+  .must-learn {
+    color: #ff0000;
+    font-weight: bold;
+  }
+
+  .description {
+    margin: 10px 0;
+  }
+
+  .knowledge {
+    margin: 10px 0;
+
+    .recommended {
+      color: #ffd100;
+    }
+
+    .required {
+      color: #ff0000;
+    }
+
+    .dependency {
+      font-weight: bold;
+    }
+  }
+
+  .help {
+    color: #00ff00;
+  }
+}
+
+.skill-icon {
+  display: block;
+  text-indent: -9999px;
+
+  &-html {
+    background: url("../icons/html.svg");
+  }
+
+  &-css {
+    background: url("../icons/css.svg");
+  }
+
+  &-sql {
+    background: url("../icons/sql.svg");
+  }
+
+  &-graphql {
+    background: url("../icons/graphql.svg");
+  }
+
+  &-javascript {
+    background: url("../icons/javascript.svg");
+  }
+
+  &-typescript {
+    background: url("../icons/typescript.svg");
+  }
+
+  &-coffeescript {
+    background: url("../icons/coffeescript.svg");
+  }
+
+  &-java {
+    background: url("../icons/java.svg");
+  }
+
+  &-python {
+    background: url("../icons/python.svg");
+  }
+
+  &-ruby {
+    background: url("../icons/ruby.svg");
+  }
+
+  &-node-js {
+    background: url("../icons/node-js.svg");
+  }
+
+  &-ruby-on-rails {
+    background: url("../icons/ruby-on-rails.svg");
+  }
+
+  &-django {
+    background: url("../icons/django.svg");
+  }
+
+  &-spring {
+    background: url("../icons/spring.svg");
+  }
+
+  &-react {
+    background: url("../icons/react.svg");
+  }
+
+  &-angular {
+    background: url("../icons/angular.svg");
+  }
+
+  &-vuejs {
+    background: url("../icons/vuejs.svg");
+  }
+
+  &-postgresql {
+    background: url("../icons/postgresql.svg");
+  }
+
+  &-sqlite {
+    background: url("../icons/sqlite.svg");
+  }
+
+  &-mysql {
+    background: url("../icons/mysql.svg");
+  }
+
+  &-redis {
+    background: url("../icons/redis.svg");
+  }
+
+  &-rabbitmq {
+    background: url("../icons/rabbitmq.svg");
+  }
+}
