@@ -235,7 +235,8 @@ export default function ApplicationContainer() {
                     Descriptions are copied from <a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a>
                 </div>
                 <div className="author">
-                    Made with ❤️ by <a href="https://github.com/skwee357" target="_blank">Dmitry Kudryavstev</a>.
+                    Made with ❤️ by <a href="https://github.com/skwee357" target="_blank">Dmitry Kudryavstev</a>. <a
+                    href="https://github.com/skwee357/swe-talent-tree" target="_blank">Source Code on GitHub</a>
                 </div>
             </div>
         </>
