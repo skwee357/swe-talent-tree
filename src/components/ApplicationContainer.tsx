@@ -148,7 +148,11 @@ function TalentSkillComponent({skill, required, relation, level, onLearnSkill}: 
         <Tooltip placement="top" trigger={["hover"]} overlay={overlay} destroyTooltipOnHide={{keepParent: false}}>
             <div
                 className={classNames("profession-talent-tree-level-skill", `skill-${relation}`, {"skill-required": required})}
-                onClick={() => onLearnSkill(skill)}>
+                onClick={() => {
+                    if (relation === "available") {
+                        onLearnSkill(skill)
+                    }
+                }}>
                 <SkillIcon skill={skill}/>
             </div>
         </Tooltip>
