@@ -1,0 +1,8 @@
+[build]
+    publish = "dist"
+    command = "NODE_ENV=production BUILD_BRANCH=$BRANCH BUILD_COMMIT=$COMMIT_REF npm run build"
+
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
